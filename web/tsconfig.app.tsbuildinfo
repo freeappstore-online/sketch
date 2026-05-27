@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/renderer.ts","./src/types.ts","./src/usesketchstore.ts","./src/utils.ts","./src/components/gallery.tsx","./src/components/layerspanel.tsx","./src/components/sketchcanvas.tsx","./src/components/textinput.tsx","./src/components/toolbar.tsx"],"version":"5.9.3"}
