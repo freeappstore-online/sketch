@@ -27,11 +27,8 @@ export function renderGrid(
   const startY =
     (transform.offsetY % spacing) - spacing;
 
-  // Use CSS variables via computed style won't work in canvas; use theme-aware colors
-  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const gridColor = isDark
-    ? "rgba(255, 255, 255, 0.08)"
-    : "rgba(0, 0, 0, 0.08)";
+  // The drawing surface is always white paper (like thumbnails and exports).
+  const gridColor = "rgba(0, 0, 0, 0.08)";
 
   if (gridType === "dots") {
     ctx.fillStyle = gridColor;
@@ -178,9 +175,8 @@ export function renderLayers(
   const { width, height } = canvas;
   ctx.clearRect(0, 0, width, height);
 
-  // Background
-  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  ctx.fillStyle = isDark ? "#0f0f0f" : "#ffffff";
+  // Background: always white paper, so the default dark ink stays visible in dark mode
+  ctx.fillStyle = "#ffffff";
   ctx.fillRect(0, 0, width, height);
 
   // Grid

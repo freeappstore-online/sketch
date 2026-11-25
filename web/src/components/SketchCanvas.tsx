@@ -297,6 +297,7 @@ export default function SketchCanvas({
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
         className="block"
+        style={{ background: "#ffffff" }}
       />
     </div>
   );
